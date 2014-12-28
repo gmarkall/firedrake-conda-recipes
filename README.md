@@ -35,3 +35,17 @@ ImportError: libpetsc.so.3.05: cannot open shared object file: No such file or d
 
 This is likely due to some failure in the process of setting RPATH for some
 shared object at installation time.
+
+Notes
+-----
+
+- Presently PETSc and PyOP2 depend on the mpi4py conda package, which uses mpich2.
+- LAPACK 3.5.0 with its embedded BLAS is used at the moment - this is likely to
+  be slow. It should be possible to use ATLAS or possibly MKL, but this basic
+  setup is used until correct functionality is obtained.
+- Recipes for PETSc and PETSc4py point to a local tarball at the moment, due to
+  the slowness of the clone from Bitbucket. This could be remedied if there is a
+  way to perform a shallow clone for a conda build.
+- Building and testing is presently done on a Debian 7.6.0 machine, but moving
+  to using Binstar Build would be desirable.
+- All building/testing is being done with Python 2.7 initially.
