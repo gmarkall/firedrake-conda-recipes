@@ -1,0 +1,27 @@
+package:
+  name: petsc4py
+  version: 3.5dev1
+
+source:
+  fn: petsc4py-firedrake-da657fa.tar.gz
+  url: file:///home/gmarkall/tmp/petsc4py-firedrake-da657fa.tar.gz
+  sha1: a9a3f7bbf79f501102c52fa996861562f701807b
+
+requirements:
+  build:
+    - python
+    - mpi4py
+    - petsc
+    - numpy
+    - cython
+
+  run:
+    - python
+    - mpi4py
+    - petsc
+    - numpy
+
+about:
+  home: http://www.firedrakeproject.org
+  license: BSD
+  summary: PETSc4py from the Firedrake Project's repository

@@ -1,0 +1,21 @@
+package:
+  name: coffee
+  version: 0.1.0dev1
+
+source:
+  git_url: https://github.com/coneoproject/COFFEE.git
+  git_tag: master
+
+requirements:
+  build:
+    - python
+    - networkx
+
+  run:
+    - python
+    - networkx
+
+about:
+  home: http://www.firedrakeproject.org
+  license: BSD
+  summary: COFFEE - COmpiler For Fast Expression Evaluation

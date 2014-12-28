@@ -1,0 +1,24 @@
+package:
+  name: petsc
+  version: 3.5.2dev1
+
+source:
+  fn: petsc-firedrake-5609cbf.tar.gz
+  url: file:///home/gmarkall/tmp/petsc-firedrake-5609cbf.tar.gz
+  sha1: 5af596cec07334a160bcaceee336fad5e7faf7ee
+
+requirements:
+  build:
+    - python
+    - mpi4py
+    - lapack
+
+  run:
+    - python
+    - mpi4py
+    - lapack
+
+about:
+  home: http://www.firedrakeproject.org
+  license: BSD
+  summary: PETSc from the Firedrake Project's repository
