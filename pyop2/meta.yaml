@@ -6,6 +6,11 @@ source:
   git_url: https://github.com/OP2/PyOP2.git
   git_tag: conda
 
+build:
+  rpaths:
+    - lib/python{{environ['PY_VER']}}/site-packages/petsc/lib
+    - lib
+
 requirements:
   build:
     - python

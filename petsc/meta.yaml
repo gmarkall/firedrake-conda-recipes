@@ -7,6 +7,11 @@ source:
   url: file:///home/gmarkall/tmp/petsc-firedrake-5609cbf.tar.gz
   sha1: 5af596cec07334a160bcaceee336fad5e7faf7ee
 
+build:
+  rpaths:
+    - lib/python{{environ['PY_VER']}}/site-packages/petsc/lib
+    - lib
+
 requirements:
   build:
     - python
