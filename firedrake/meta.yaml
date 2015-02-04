@@ -1,0 +1,30 @@
+package:
+  name: firedrake
+  version: "0.12.0dev1"
+
+source:
+  git_url: https://github.com/firedrakeproject/firedrake
+
+requirements:
+  build:
+    - python
+    - numpy
+    - cython
+    - petsc4py
+
+  run:
+    - python
+    - numpy
+    - ufl ==1.5.0+dev1
+    - fiat ==1.5.0+dev1
+    - instant ==1.5.0+
+    - ffc ==1.5.0+
+    - pyop2
+
+about:
+  home: http://firedrakeproject.org/
+  summary: 'The Firedrake System for Automated Solution of PDEs using FEM'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
