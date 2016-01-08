@@ -49,3 +49,22 @@ Notes
 - Building and testing is presently done on a Debian 7.6.0 machine, but moving
   to using Binstar Build would be desirable.
 - All building/testing is being done with Python 2.7 initially.
+
+Juanlu TODO
+-----------
+
+Friday:
+- Start from the bottom and build incrementally
+- Study the situation of conda mpi4py (mine?), which apparently uses mpich2
+- Use OpenBLAS
+
+Saturday:
+- Make PETSc and petsc4py work
+- Bring extra FEniCS requirements and add +mapdes version
+- Consider rlink fixes
+
+Sunday:
+- Make PyOP2 work
+- Make Firedrake work
+- Bring everything to Anaconda Server
+- You have until January 11th 00:00
