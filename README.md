@@ -53,11 +53,6 @@ Notes
 Juanlu TODO
 -----------
 
-Friday:
-- Start from the bottom and build incrementally
-- Study the situation of conda mpi4py (mine?), which apparently uses mpich2
-- Use OpenBLAS
-
 Saturday:
 - Make PETSc and petsc4py work
 - Bring extra FEniCS requirements and add +mapdes version
