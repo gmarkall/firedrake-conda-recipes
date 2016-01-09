@@ -54,7 +54,6 @@ Juanlu TODO
 -----------
 
 Saturday:
-- Make PETSc and petsc4py work
 - Bring extra FEniCS requirements and add +mapdes version
 - Consider rlink fixes
 
