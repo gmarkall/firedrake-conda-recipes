@@ -1,5 +1,3 @@
-export PETSC_DIR=$PREFIX
-
 cd $SRC_DIR
 
 py.test test --backend=sequential -v --tb=native
