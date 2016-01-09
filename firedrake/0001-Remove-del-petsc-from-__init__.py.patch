@@ -1,0 +1,12 @@
+diff --git a/firedrake/__init__.py b/firedrake/__init__.py
+index a7d36ec..5ba2532 100644
+--- firedrake/__init__.py
++++ firedrake/__init__.py
+@@ -1,7 +1,6 @@
+ from __future__ import absolute_import
+ # Ensure petsc is initialised by us before anything else gets in there.
+ import firedrake.petsc as petsc
+-del petsc
+ 
+ # UFL Exprs come with a custom __del__ method, but we hold references
+ # to them /everywhere/, some of which are circular (the Mesh object

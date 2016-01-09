@@ -5,6 +5,8 @@ package:
 source:
   git_url: https://github.com/firedrakeproject/firedrake
   git_tag: v0.12.0
+  patches:
+    - 0001-Remove-del-petsc-from-__init__.py.patch
 
 requirements:
   build:
@@ -25,6 +27,10 @@ requirements:
     - instant ==1.5.0+mapdes
     - ffc ==1.5.0+mapdes
     - pyop2
+
+test:
+  requires:
+    - pytest
 
 about:
   home: http://firedrakeproject.org/
