@@ -1,11 +1,9 @@
 package:
   name: ffc
-  version: "1.5.0+mapdes"
+  version: "1.7.0dev+mapdes"
 
 source:
-  fn: ffc-1.5.0.tar.gz
-  url: https://bitbucket.org/fenics-project/ffc/downloads/ffc-1.5.0.tar.gz
-  md5: 343f6d30e7e77d329a400fd8e73e0b63
+  git_url: https://bitbucket.org/mapdes/ffc.git
 
 build:
   number: 1
@@ -20,9 +18,10 @@ requirements:
     - python
     - numpy
     - swig
-    - ufl ==1.5.0+mapdes
-    - fiat ==1.5.0+mapdes
+    - ufl ==1.7.0dev+mapdes
+    - fiat ==1.7.0dev+mapdes
     - instant ==1.5.0+mapdes
+    - coffee
 
 test:
   imports:

@@ -1,11 +1,9 @@
 package:
   name: ufl
-  version: "1.5.0+mapdes"
+  version: "1.7.0dev+mapdes"
 
 source:
-  fn: ufl-1.5.0.tar.gz
-  url: https://bitbucket.org/fenics-project/ufl/downloads/ufl-1.5.0.tar.gz
-  md5: 130d7829cf5a4bd5b52bf6d0955116fd
+  git_url: https://bitbucket.org/mapdes/ufl.git
 
 build:
   number: 1
