@@ -1,0 +1,46 @@
+package:
+  name: ffc
+  version: "1.7.0dev+mapdes"
+
+source:
+  git_url: https://bitbucket.org/mapdes/ffc.git
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - python
+    - numpy
+    - swig
+
+  run:
+    - python
+    - numpy
+    - swig
+    - ufl ==1.7.0dev+mapdes
+    - fiat ==1.7.0dev+mapdes
+    - instant ==1.5.0+mapdes
+    - coffee
+
+test:
+  imports:
+    - ffc
+    - ffc.backends
+    - ffc.backends.dolfin
+    - ffc.backends.ufc
+    - ffc.errorcontrol
+    - ffc.quadrature
+    - ffc.tensor
+    #- ffc_time_ext.time_elements_ext  # See #47
+    - ufc
+    - ufc._ufc
+
+  commands:
+    - ffc --help
+
+about:
+  home: http://fenicsproject.org/
+  license: The GNU Lesser General Public License, version 3.0
+  summary: 'The FEniCS Form Compiler'
+

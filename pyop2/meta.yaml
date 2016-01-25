@@ -1,12 +1,15 @@
 package:
   name: pyop2
-  version: 0.11.0dev1
+  version: 0.12.0
 
 source:
   git_url: https://github.com/OP2/PyOP2.git
-  git_tag: conda
+  git_tag: v0.12.0
+  patches:
+    - 0001-Remove-dependency_links.patch
 
 build:
+  number: 1
   rpaths:
     - lib/python{{environ['PY_VER']}}/site-packages/petsc/lib
     - lib
@@ -16,7 +19,7 @@ requirements:
     - python
     - coffee
     - mpi4py
-    - petsc4py
+    - petsc4py ==3.6.0+mapdes
     - decorator
     - setuptools
     - cython
@@ -27,10 +30,14 @@ requirements:
     - python
     - coffee
     - mpi4py
-    - petsc4py
+    - petsc4py ==3.6.0+mapdes
     - decorator
     - h5py
     - pycparser
+
+test:
+  requires:
+    - pytest
 
 about:
   home: http://www.firedrakeproject.org

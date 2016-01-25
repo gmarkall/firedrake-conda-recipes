@@ -14,6 +14,11 @@ requirements:
   run:
     - python
     - networkx
+    - numpy
+
+test:
+  requires:
+    - pytest
 
 about:
   home: http://www.firedrakeproject.org

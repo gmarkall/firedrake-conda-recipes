@@ -1,0 +1,37 @@
+package:
+  name: fiat
+  version: "1.7.0dev+mapdes"
+
+source:
+  git_url: https://bitbucket.org/mapdes/fiat.git
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - python
+    - sympy
+
+  run:
+    - python
+    - numpy
+    - sympy
+    - six
+    - ufl ==1.7.0dev+mapdes
+
+test:
+  imports:
+    - FIAT
+
+  requires:
+    - nose
+
+about:
+  home: http://fenicsproject.org/
+  license: The GNU Lesser General Public License, version 3.0
+  summary: 'FInite element Automatic Tabulator'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

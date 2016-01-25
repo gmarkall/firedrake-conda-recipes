@@ -1,0 +1,42 @@
+package:
+  name: ufl
+  version: "1.7.0dev+mapdes"
+
+source:
+  git_url: https://bitbucket.org/mapdes/ufl.git
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - python
+
+  run:
+    - python
+    - six
+
+test:
+  imports:
+    - ufl
+    - ufl.utils
+    - ufl.finiteelement
+    - ufl.core
+    - ufl.corealg
+    - ufl.algorithms
+
+  commands:
+#    - ufl-convert --help  # See #55
+    - ufl-version
+    - ufl2py --help
+#    - form2ufl --help  # See #56
+
+  requires:
+    - pytest
+
+
+about:
+  home: http://www.fenicsproject.org
+  license: The GNU Lesser General Public License, version 3.0
+  summary: 'Unified Form Language'
+

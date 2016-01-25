@@ -1,25 +1,36 @@
 package:
   name: firedrake
-  version: "0.12.0dev1"
+  version: "0.12.0"
 
 source:
   git_url: https://github.com/firedrakeproject/firedrake
+  git_tag: v0.12.0
+  patches:
+    - 0001-Remove-del-petsc-from-__init__.py.patch
 
 requirements:
   build:
     - python
     - numpy
     - cython
-    - petsc4py
+    - petsc4py ==3.6.0+mapdes
+    - h5py
+    - libspatialindex
 
   run:
     - python
     - numpy
-    - ufl ==1.5.0+dev1
-    - fiat ==1.5.0+dev1
-    - instant ==1.5.0+
-    - ffc ==1.5.0+
+    - h5py
+    - libspatialindex
+    - ufl ==1.5.0+mapdes
+    - fiat ==1.5.0+mapdes
+    - instant ==1.5.0+mapdes
+    - ffc ==1.5.0+mapdes
     - pyop2
+
+test:
+  requires:
+    - pytest
 
 about:
   home: http://firedrakeproject.org/
